@@ -46,9 +46,10 @@
 #define BLUEFRUIT_MODE_DATA      LOW
 #define BLE_BUFSIZE              4*SDEP_MAX_PACKETSIZE
 
-
+ 
 #if defined(ARDUINO_SAMD_ZERO) && defined(SERIAL_PORT_USBVIRTUAL)
-#define SerialDebug SERIAL_PORT_USBVIRTUAL
+// JA CHANGE TO ALLOW HARDWARE SERIAL FORCING
+#define SerialDebug Serial1
 #else
 #define SerialDebug Serial
 #endif
